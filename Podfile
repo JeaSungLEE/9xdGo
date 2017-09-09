@@ -6,6 +6,7 @@ target '9xdGo' do
   use_frameworks!
 pod 'Alamofire', '~> 4.5'
 pod 'SwiftyJSON'
+pod 'SDWebImage', '~> 4.0'
   # Pods for 9xdGo
 
 end
