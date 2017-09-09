@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy" translatesAutoresizingMaskIntoConstraints="NO" id="GXS-UQ-RxB">
-                                        <rect key="frame" x="0.0" y="0.0" width="2048" height="1366"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1674" height="1674"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -92,7 +92,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dummy" width="2048" height="1366"/>
+        <image name="dummy" width="1674" height="1674"/>
         <image name="profile" width="320" height="320"/>
     </resources>
 </document>
