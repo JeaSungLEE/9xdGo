@@ -228,6 +228,7 @@
 				TargetAttributes = {
 					3F9B88831F63A36A00A542EF = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = QW8WG57S94;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -454,7 +455,7 @@
 			baseConfigurationReference = D6E5861DB585A6FD9C5E14DD /* Pods-9xdGo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QW8WG57S94;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/9xdGo",
@@ -474,7 +475,7 @@
 			baseConfigurationReference = 52C4860B2F90D48FF1A45D6B /* Pods-9xdGo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QW8WG57S94;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/9xdGo",

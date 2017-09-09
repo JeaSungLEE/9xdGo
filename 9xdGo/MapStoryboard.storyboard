@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A344b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LGX-fr-MwF">
-    <device id="retina5_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LGX-fr-MwF">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,70 +25,71 @@
                         <viewControllerLayoutGuide type="bottom" id="AUs-dY-cHL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="llE-3t-5y9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="uwv-ac-Fav">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starBackground" translatesAutoresizingMaskIntoConstraints="NO" id="GXS-UQ-RxB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZp-Ri-A4g" customClass="ProfileFloatingView" customModule="_xdGo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="536" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="467" width="375" height="200"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatting" translatesAutoresizingMaskIntoConstraints="NO" id="Lyv-Br-3HE">
-                                        <rect key="frame" x="5" y="5" width="404" height="190"/>
+                                        <rect key="frame" x="20" y="5" width="335" height="175"/>
                                         <rect key="contentStretch" x="0.5" y="0.5" width="5.0000000000000002e-05" height="5.0000000000000002e-05"/>
                                     </imageView>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="lw2-Qc-trx">
-                                        <rect key="frame" x="190" y="30" width="189" height="30"/>
-                                        <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="30"/>
+                                        <rect key="frame" x="185" y="30" width="145" height="29.5"/>
+                                        <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product" translatesAutoresizingMaskIntoConstraints="NO" id="Yyt-y0-wTG">
-                                        <rect key="frame" x="35" y="30" width="140" height="140"/>
+                                        <rect key="frame" x="45" y="30" width="125" height="125"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Yyt-y0-wTG" secondAttribute="height" id="ymY-Id-kIf"/>
                                         </constraints>
                                     </imageView>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzf-Sz-WQQ">
-                                        <rect key="frame" x="190" y="110" width="189" height="60"/>
-                                        <color key="backgroundColor" red="1" green="0.6588235294" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="185" y="95" width="145" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="M2K-AJ-9Bg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="17"/>
-                                        <state key="normal" title="Purchase"/>
+                                        <state key="normal" title="Purchase" backgroundImage="purchaseButtonImage">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="purchaseButtonAction:" destination="LGX-fr-MwF" eventType="touchUpInside" id="119-rx-B0I"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김진아 님, 60% 정복!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTy-MA-OMA">
-                                        <rect key="frame" x="111.66666666666669" y="52" width="192" height="96"/>
+                                        <rect key="frame" x="82.5" y="36.5" width="210.5" height="112"/>
                                         <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="48"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Lyv-Br-3HE" secondAttribute="bottom" constant="5" id="3R7-u2-pg2"/>
+                                    <constraint firstItem="mTy-MA-OMA" firstAttribute="centerX" secondItem="Lyv-Br-3HE" secondAttribute="centerX" id="1nM-U9-H8t"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lyv-Br-3HE" secondAttribute="bottom" constant="20" id="3R7-u2-pg2"/>
                                     <constraint firstItem="lw2-Qc-trx" firstAttribute="top" secondItem="Yyt-y0-wTG" secondAttribute="top" id="3rP-Gz-0KV"/>
                                     <constraint firstItem="pzf-Sz-WQQ" firstAttribute="leading" secondItem="lw2-Qc-trx" secondAttribute="leading" id="7Yk-Ha-nEf"/>
                                     <constraint firstItem="Yyt-y0-wTG" firstAttribute="top" secondItem="LZp-Ri-A4g" secondAttribute="top" constant="30" id="BWI-wn-ELd"/>
-                                    <constraint firstItem="mTy-MA-OMA" firstAttribute="centerX" secondItem="LZp-Ri-A4g" secondAttribute="centerX" id="BsL-FD-IRM"/>
-                                    <constraint firstItem="mTy-MA-OMA" firstAttribute="centerY" secondItem="LZp-Ri-A4g" secondAttribute="centerY" id="Emx-k4-DDY"/>
                                     <constraint firstItem="lw2-Qc-trx" firstAttribute="leading" secondItem="Yyt-y0-wTG" secondAttribute="trailing" constant="15" id="MZj-1k-iFm"/>
-                                    <constraint firstAttribute="bottom" secondItem="Yyt-y0-wTG" secondAttribute="bottom" constant="30" id="Mu4-N4-vBv"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yyt-y0-wTG" secondAttribute="bottom" constant="45" id="Mu4-N4-vBv"/>
                                     <constraint firstItem="pzf-Sz-WQQ" firstAttribute="bottom" secondItem="Yyt-y0-wTG" secondAttribute="bottom" id="T81-Df-qkY"/>
-                                    <constraint firstItem="Lyv-Br-3HE" firstAttribute="leading" secondItem="LZp-Ri-A4g" secondAttribute="leading" constant="5" id="aNe-uJ-9vP"/>
+                                    <constraint firstItem="Lyv-Br-3HE" firstAttribute="leading" secondItem="LZp-Ri-A4g" secondAttribute="leading" constant="20" id="aNe-uJ-9vP"/>
                                     <constraint firstItem="Lyv-Br-3HE" firstAttribute="top" secondItem="LZp-Ri-A4g" secondAttribute="top" constant="5" id="dSO-rI-hAk"/>
-                                    <constraint firstAttribute="trailing" secondItem="lw2-Qc-trx" secondAttribute="trailing" constant="35" id="jyP-zd-DD4"/>
-                                    <constraint firstAttribute="trailing" secondItem="Lyv-Br-3HE" secondAttribute="trailing" constant="5" id="k02-js-eHh"/>
+                                    <constraint firstItem="mTy-MA-OMA" firstAttribute="centerY" secondItem="Lyv-Br-3HE" secondAttribute="centerY" id="edd-ES-N9W"/>
+                                    <constraint firstAttribute="trailing" secondItem="lw2-Qc-trx" secondAttribute="trailing" constant="45" id="jyP-zd-DD4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lyv-Br-3HE" secondAttribute="trailing" constant="20" id="k02-js-eHh"/>
                                     <constraint firstAttribute="height" constant="200" id="lNC-dQ-VzS"/>
-                                    <constraint firstAttribute="trailing" secondItem="pzf-Sz-WQQ" secondAttribute="trailing" constant="35" id="xJ7-26-wGe"/>
-                                    <constraint firstItem="Yyt-y0-wTG" firstAttribute="leading" secondItem="LZp-Ri-A4g" secondAttribute="leading" constant="35" id="zbG-HP-zNB"/>
+                                    <constraint firstAttribute="trailing" secondItem="pzf-Sz-WQQ" secondAttribute="trailing" constant="45" id="xJ7-26-wGe"/>
+                                    <constraint firstItem="Yyt-y0-wTG" firstAttribute="leading" secondItem="LZp-Ri-A4g" secondAttribute="leading" constant="45" id="zbG-HP-zNB"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -129,20 +130,20 @@
                         <viewControllerLayoutGuide type="bottom" id="5eR-s2-d9X"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kq9-hq-3j5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhQ-Pa-Gro">
-                                <rect key="frame" x="20" y="656" width="374" height="60"/>
-                                <color key="backgroundColor" red="1" green="0.6588235294" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhQ-Pa-Gro">
+                                <rect key="frame" x="16" y="587" width="343" height="60"/>
+                                <rect key="contentStretch" x="0.5" y="0.5" width="0.5" height="0.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="jpK-9C-CxZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="21"/>
-                                <state key="normal" title="Purchase"/>
+                                <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="20"/>
+                                <state key="normal" title="Purchase" backgroundImage="purchaseButtonImage"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejQ-dD-X3g">
-                                <rect key="frame" x="20" y="40" width="30" height="30"/>
+                                <rect key="frame" x="16" y="40" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="YPn-Jn-mZs"/>
                                     <constraint firstAttribute="height" constant="30" id="p7Z-DP-5Di"/>
@@ -153,19 +154,19 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4DG-Eg-otB">
-                                <rect key="frame" x="20" y="85" width="374" height="300"/>
+                                <rect key="frame" x="16" y="85" width="343" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="u2Y-r8-CLp"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOb-ic-FSj">
-                                <rect key="frame" x="20" y="405" width="80" height="30"/>
+                                <rect key="frame" x="16" y="405" width="78" height="35"/>
                                 <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="얘는 후드티입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IM-OS-EsI">
-                                <rect key="frame" x="20" y="450" width="128" height="17"/>
+                                <rect key="frame" x="16" y="455" width="128" height="20"/>
                                 <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -203,6 +204,7 @@
         <image name="chatting" width="996" height="507"/>
         <image name="closeButton" width="600" height="600"/>
         <image name="product" width="800" height="526"/>
+        <image name="purchaseButtonImage" width="51" height="153"/>
         <image name="starBackground" width="1173" height="1164"/>
     </resources>
 </document>
