@@ -30,6 +30,18 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     
+    @IBOutlet var firstBackTop: NSLayoutConstraint!
+    @IBOutlet var firstBackRight: NSLayoutConstraint!
+    @IBOutlet var firstBackLeft: NSLayoutConstraint!
+    @IBOutlet var firstBackBottom: NSLayoutConstraint!
+    
+    @IBOutlet var secondBackTop: NSLayoutConstraint!
+    @IBOutlet var secondBackRight: NSLayoutConstraint!
+    @IBOutlet var secondBackBottom: NSLayoutConstraint!
+    @IBOutlet var secondBackLeft: NSLayoutConstraint!
+    
+    @IBOutlet var starBottom: NSLayoutConstraint!
+    @IBOutlet var starTop: NSLayoutConstraint!
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -53,6 +65,11 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
+        
+        self.secondBackTop.constant = -80
+        self.secondBackBottom.constant = 0
+        self.secondBackLeft.constant = -getScreenSize().width
+        self.secondBackRight.constant = getScreenSize().width
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,6 +86,41 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
                 UserInfoService.shared.fetchUserInfo(accessToken: accessToken, profile: profile)
             }
             self.requestPlace()
+        }
+//        
+//        UIView.animate(withDuration: 2, delay: 0, options: [.repeat, .autoreverse], animations: {
+//            self.starTop.constant = -10
+//            self.starBottom.constant = 10
+//            self.view.layoutIfNeeded()
+//        }) { (t) in
+//            self.starTop.constant = 0
+//            self.starBottom.constant = 0
+//            self.view.layoutIfNeeded()
+//        }
+//        
+        UIView.animate(withDuration: 20, delay: 0, options: [.repeat, .autoreverse], animations: {
+            self.firstBackTop.constant = 0
+            self.firstBackBottom.constant = -80
+            self.firstBackLeft.constant = getScreenSize().width
+            self.firstBackRight.constant = -getScreenSize().width
+            
+            self.secondBackTop.constant = 0
+            self.secondBackBottom.constant = -80
+            self.secondBackLeft.constant = 0
+            self.secondBackRight.constant = 0
+            self.view.layoutIfNeeded()
+        })
+        { (t) in
+            self.firstBackTop.constant = -80
+            self.firstBackBottom.constant = 0
+            self.firstBackLeft.constant = 0
+            self.firstBackRight.constant = 0
+            
+            self.secondBackTop.constant = -80
+            self.secondBackBottom.constant = 0
+            self.secondBackLeft.constant = -getScreenSize().width
+            self.secondBackRight.constant = getScreenSize().width
+            self.view.layoutIfNeeded()
         }
     }
     
@@ -100,7 +152,6 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         profileName.isHidden = false
         purchaseButton.isHidden = false
         테두리이미지.isHidden = false
-        
         
         let index = sender.tag
         

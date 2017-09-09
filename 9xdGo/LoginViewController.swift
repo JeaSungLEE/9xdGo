@@ -12,14 +12,37 @@ import FBSDKLoginKit
 import SwiftyJSON
 
 class LoginViewController: UIViewController {
+    @IBOutlet var topImage: UIImageView!
+    @IBOutlet var bottomImage: UIImageView!
+    @IBOutlet var topImageLeft: NSLayoutConstraint!
+    @IBOutlet var topImageTop: NSLayoutConstraint!
     let loginButton = FBSDKLoginButton()
     
     override var prefersStatusBarHidden: Bool {
         return true
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 1, delay: 0, options: [.autoreverse, .repeat], animations: {
+            self.topImage.alpha = 0
+            self.view.layoutIfNeeded()
+        }, completion: { (t) -> Void in
+            self.topImage.alpha = 1
+            self.view.layoutIfNeeded()
+        })
+        UIView.animate(withDuration: 1, delay: 0.5, options: [.autoreverse, .repeat], animations: {
+            self.bottomImage.alpha = 0
+            self.view.layoutIfNeeded()
+        }, completion: { (t) -> Void in
+            self.bottomImage.alpha = 1
+            self.view.layoutIfNeeded()
+        })
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         loginButton.frame = CGRect(x: -100, y: -100, width: 0, height: 0)
         view.addSubview(loginButton)
         
@@ -60,7 +83,7 @@ class LoginViewController: UIViewController {
         // fb 로그인 성공시 호출
         getUserInfo()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
