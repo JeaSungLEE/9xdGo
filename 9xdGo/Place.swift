@@ -17,7 +17,7 @@ struct Place {
     let address: String
     let latitude: Double
     let longitude: Double
-    let radius: Float
+    let radius: Double
     let products: [Product]
     let isConquested: Bool
     
@@ -28,7 +28,7 @@ struct Place {
         self.address = json["address"].stringValue
         self.latitude = json["latitude"].doubleValue
         self.longitude = json["latitude"].doubleValue
-        self.radius = json["radius"].floatValue
+        self.radius = json["radius"].doubleValue
         self.products = json["products"].arrayValue.map { Product(json: $0) }
         self.isConquested = json["conquest"].bool ?? false
     }
