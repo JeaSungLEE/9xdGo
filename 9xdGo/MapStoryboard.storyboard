@@ -31,7 +31,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="uwv-ac-Fav">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starBackground" translatesAutoresizingMaskIntoConstraints="NO" id="GXS-UQ-RxB">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starbackground" translatesAutoresizingMaskIntoConstraints="NO" id="GXS-UQ-RxB">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZp-Ri-A4g" customClass="ProfileFloatingView" customModule="_xdGo" customModuleProvider="target">
@@ -42,19 +42,20 @@
                                         <rect key="contentStretch" x="0.5" y="0.5" width="5.0000000000000002e-05" height="5.0000000000000002e-05"/>
                                     </imageView>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="lw2-Qc-trx">
-                                        <rect key="frame" x="185" y="30" width="145" height="29.5"/>
+                                        <rect key="frame" x="180" y="35" width="150" height="29.5"/>
                                         <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product" translatesAutoresizingMaskIntoConstraints="NO" id="Yyt-y0-wTG">
-                                        <rect key="frame" x="45" y="30" width="125" height="125"/>
+                                        <rect key="frame" x="50" y="35" width="115" height="115"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Yyt-y0-wTG" secondAttribute="height" id="ymY-Id-kIf"/>
                                         </constraints>
                                     </imageView>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzf-Sz-WQQ">
-                                        <rect key="frame" x="185" y="95" width="145" height="60"/>
+                                        <rect key="frame" x="180" y="90" width="150" height="60"/>
+                                        <rect key="contentStretch" x="0.5" y="0.5" width="0.10000000000000001" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="M2K-AJ-9Bg"/>
                                         </constraints>
@@ -67,29 +68,36 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김진아 님, 60% 정복!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTy-MA-OMA">
-                                        <rect key="frame" x="82.5" y="36.5" width="210.5" height="112"/>
+                                        <rect key="frame" x="83" y="36.5" width="210.5" height="112"/>
                                         <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="48"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="테두리" translatesAutoresizingMaskIntoConstraints="NO" id="jDR-fQ-l4j">
+                                        <rect key="frame" x="45" y="30" width="125" height="125"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="mTy-MA-OMA" firstAttribute="centerX" secondItem="Lyv-Br-3HE" secondAttribute="centerX" id="1nM-U9-H8t"/>
                                     <constraint firstAttribute="bottom" secondItem="Lyv-Br-3HE" secondAttribute="bottom" constant="20" id="3R7-u2-pg2"/>
                                     <constraint firstItem="lw2-Qc-trx" firstAttribute="top" secondItem="Yyt-y0-wTG" secondAttribute="top" id="3rP-Gz-0KV"/>
                                     <constraint firstItem="pzf-Sz-WQQ" firstAttribute="leading" secondItem="lw2-Qc-trx" secondAttribute="leading" id="7Yk-Ha-nEf"/>
-                                    <constraint firstItem="Yyt-y0-wTG" firstAttribute="top" secondItem="LZp-Ri-A4g" secondAttribute="top" constant="30" id="BWI-wn-ELd"/>
+                                    <constraint firstItem="Yyt-y0-wTG" firstAttribute="top" secondItem="LZp-Ri-A4g" secondAttribute="top" constant="35" id="BWI-wn-ELd"/>
                                     <constraint firstItem="lw2-Qc-trx" firstAttribute="leading" secondItem="Yyt-y0-wTG" secondAttribute="trailing" constant="15" id="MZj-1k-iFm"/>
-                                    <constraint firstAttribute="bottom" secondItem="Yyt-y0-wTG" secondAttribute="bottom" constant="45" id="Mu4-N4-vBv"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yyt-y0-wTG" secondAttribute="bottom" constant="50" id="Mu4-N4-vBv"/>
+                                    <constraint firstItem="jDR-fQ-l4j" firstAttribute="leading" secondItem="Yyt-y0-wTG" secondAttribute="leading" constant="-5" id="PFs-FJ-KnN"/>
                                     <constraint firstItem="pzf-Sz-WQQ" firstAttribute="bottom" secondItem="Yyt-y0-wTG" secondAttribute="bottom" id="T81-Df-qkY"/>
+                                    <constraint firstItem="jDR-fQ-l4j" firstAttribute="top" secondItem="Yyt-y0-wTG" secondAttribute="top" constant="-5" id="Y2V-5s-yYR"/>
                                     <constraint firstItem="Lyv-Br-3HE" firstAttribute="leading" secondItem="LZp-Ri-A4g" secondAttribute="leading" constant="20" id="aNe-uJ-9vP"/>
+                                    <constraint firstItem="jDR-fQ-l4j" firstAttribute="bottom" secondItem="Yyt-y0-wTG" secondAttribute="bottom" constant="5" id="dNd-n8-hcX"/>
                                     <constraint firstItem="Lyv-Br-3HE" firstAttribute="top" secondItem="LZp-Ri-A4g" secondAttribute="top" constant="5" id="dSO-rI-hAk"/>
                                     <constraint firstItem="mTy-MA-OMA" firstAttribute="centerY" secondItem="Lyv-Br-3HE" secondAttribute="centerY" id="edd-ES-N9W"/>
                                     <constraint firstAttribute="trailing" secondItem="lw2-Qc-trx" secondAttribute="trailing" constant="45" id="jyP-zd-DD4"/>
                                     <constraint firstAttribute="trailing" secondItem="Lyv-Br-3HE" secondAttribute="trailing" constant="20" id="k02-js-eHh"/>
                                     <constraint firstAttribute="height" constant="200" id="lNC-dQ-VzS"/>
+                                    <constraint firstItem="jDR-fQ-l4j" firstAttribute="trailing" secondItem="Yyt-y0-wTG" secondAttribute="trailing" constant="5" id="n7N-pn-N3B"/>
                                     <constraint firstAttribute="trailing" secondItem="pzf-Sz-WQQ" secondAttribute="trailing" constant="45" id="xJ7-26-wGe"/>
-                                    <constraint firstItem="Yyt-y0-wTG" firstAttribute="leading" secondItem="LZp-Ri-A4g" secondAttribute="leading" constant="45" id="zbG-HP-zNB"/>
+                                    <constraint firstItem="Yyt-y0-wTG" firstAttribute="leading" secondItem="LZp-Ri-A4g" secondAttribute="leading" constant="50" id="zbG-HP-zNB"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -115,11 +123,12 @@
                         <outlet property="profileImageView" destination="Yyt-y0-wTG" id="g5S-ym-fEl"/>
                         <outlet property="profileName" destination="lw2-Qc-trx" id="qsa-hy-lth"/>
                         <outlet property="purchaseButton" destination="pzf-Sz-WQQ" id="6J4-Qa-7kj"/>
+                        <outlet property="테두리이미지" destination="jDR-fQ-l4j" id="CXT-x3-O3W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Or-cP-85E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-452.17391304347831" y="-1137.2282608695652"/>
+            <point key="canvasLocation" x="-453.60000000000002" y="-1137.481259370315"/>
         </scene>
         <!--Product Detail View Controller-->
         <scene sceneID="XFk-mG-cgN">
@@ -135,11 +144,10 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhQ-Pa-Gro">
                                 <rect key="frame" x="16" y="587" width="343" height="60"/>
-                                <rect key="contentStretch" x="0.5" y="0.5" width="0.5" height="0.5"/>
+                                <rect key="contentStretch" x="0.5" y="0.5" width="0.10000000000000001" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="jpK-9C-CxZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="20"/>
                                 <state key="normal" title="Purchase" backgroundImage="purchaseButtonImage"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejQ-dD-X3g">
@@ -204,7 +212,8 @@
         <image name="chatting" width="996" height="507"/>
         <image name="closeButton" width="600" height="600"/>
         <image name="product" width="800" height="526"/>
-        <image name="purchaseButtonImage" width="51" height="153"/>
-        <image name="starBackground" width="1173" height="1164"/>
+        <image name="purchaseButtonImage" width="447" height="153"/>
+        <image name="starbackground" width="1083" height="1095"/>
+        <image name="테두리" width="137" height="135"/>
     </resources>
 </document>

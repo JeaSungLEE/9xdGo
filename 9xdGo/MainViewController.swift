@@ -17,6 +17,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var chattingImageView: UIImageView!
     @IBOutlet var purchaseButton: UIButton!
     @IBOutlet var completeLabel: UILabel!
+    @IBOutlet var 테두리이미지: UIImageView!
     
     private var index = 0
     private let profileViewHeight: CGFloat = 200
@@ -25,10 +26,17 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         makePins()
+        
+        profileImageView.layer.masksToBounds = true
+        profileImageView.layer.cornerRadius = profileImageView.frame.height / 5
         
         // Ask for Authorisation from the User.
         self.locationManager.requestAlwaysAuthorization()
@@ -43,10 +51,6 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        UIApplication.shared.statusBarView?.backgroundColor = UIColor(red: 44/255.0, green: 43/255.0, blue: 43/255.0, alpha: 1)
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         if !isLogin() {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -59,11 +63,6 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
                 UserInfoService.shared.fetchUserInfo(accessToken: accessToken, profile: profile)
             }
         }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        UIApplication.shared.statusBarView?.backgroundColor = .white
-        
     }
     
     private func makePins() {
@@ -93,6 +92,8 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         profileImageView.isHidden = false
         profileName.isHidden = false
         purchaseButton.isHidden = false
+        테두리이미지.isHidden = false
+        
         
         let index = sender.tag
       

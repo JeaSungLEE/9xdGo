@@ -15,6 +15,10 @@ class ProductDetailViewController: UIViewController {
     var image: UIImage?
     var productName: String?
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

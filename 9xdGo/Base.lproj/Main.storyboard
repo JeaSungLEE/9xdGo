@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,33 +23,106 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9XD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1A-e3-wo0">
-                                <rect key="frame" x="82.5" y="150" width="210" height="140"/>
-                                <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="140"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOODS S#OP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60X-N1-TxJ">
-                                <rect key="frame" x="32" y="306" width="310" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOODS S#OP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diH-Ii-w2d">
+                                <rect key="frame" x="12" y="328" width="391.33333333333331" height="70"/>
                                 <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="60"/>
+                                <color key="textColor" red="0.73725490199999999" green="0.65098039220000004" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2C-1I-Vww">
+                                <rect key="frame" x="73" y="160" width="269.66666666666669" height="168"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="9">
+                                        <attributes>
+                                            <color key="NSColor" red="0.87450980392156863" green="0.25882352941176467" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="144" name="morris9"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="X">
+                                        <attributes>
+                                            <color key="NSColor" red="0.93333333333333335" green="0.88627450980392153" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="144" name="morris9"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="D">
+                                        <attributes>
+                                            <color key="NSColor" red="0.40784313725490196" green="0.75686274509803919" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="144" name="morris9"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundLight" translatesAutoresizingMaskIntoConstraints="NO" id="u2w-zc-yyk">
+                                <rect key="frame" x="0.0" y="586" width="414" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="xkm-Zv-nVk"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZX-zq-BU1">
+                                <rect key="frame" x="82" y="428" width="250" height="70"/>
+                                <rect key="contentStretch" x="0.5" y="0.0" width="0.10000000000000001" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="asl-oH-Vc5"/>
+                                    <constraint firstAttribute="height" constant="70" id="dNL-lJ-xqc"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="loginbutton"/>
+                                <connections>
+                                    <action selector="facebookButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cCy-fJ-eLT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddl-FA-sMd">
+                                <rect key="frame" x="179" y="445" width="88.333333333333314" height="39.666666666666686"/>
+                                <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebookimage" translatesAutoresizingMaskIntoConstraints="NO" id="9IC-nY-c7h">
+                                <rect key="frame" x="137" y="443" width="20" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9Em-5I-cq7"/>
+                                    <constraint firstAttribute="width" constant="20" id="aWT-B0-w86"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundLight" translatesAutoresizingMaskIntoConstraints="NO" id="xhX-Ax-bdu">
+                                <rect key="frame" x="0.0" y="-50" width="414" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Yh7-fw-ASR"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.086274509803921567" green="0.086274509803921567" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="U1A-e3-wo0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="130" id="Ivr-ve-2SP"/>
-                            <constraint firstItem="U1A-e3-wo0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KX9-aP-Ngr"/>
-                            <constraint firstItem="60X-N1-TxJ" firstAttribute="top" secondItem="U1A-e3-wo0" secondAttribute="bottom" constant="16" id="pna-mi-li5"/>
-                            <constraint firstItem="60X-N1-TxJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rIY-Vb-Pkg"/>
+                            <constraint firstAttribute="trailing" secondItem="xhX-Ax-bdu" secondAttribute="trailing" id="1Nn-T3-kQZ"/>
+                            <constraint firstItem="9IC-nY-c7h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-60" id="DDa-9i-dpg"/>
+                            <constraint firstItem="Ddl-FA-sMd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="16" id="EgH-Kf-f1M"/>
+                            <constraint firstItem="gZX-zq-BU1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LQh-MD-Wfu"/>
+                            <constraint firstAttribute="trailing" secondItem="u2w-zc-yyk" secondAttribute="trailing" id="MKr-uX-gu8"/>
+                            <constraint firstItem="Ddl-FA-sMd" firstAttribute="centerY" secondItem="9IC-nY-c7h" secondAttribute="centerY" constant="1" id="MrR-v4-19f"/>
+                            <constraint firstItem="u2w-zc-yyk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TFf-4x-YdL"/>
+                            <constraint firstItem="9IC-nY-c7h" firstAttribute="centerY" secondItem="gZX-zq-BU1" secondAttribute="centerY" id="W79-8a-Dck"/>
+                            <constraint firstItem="diH-Ii-w2d" firstAttribute="centerX" secondItem="L2C-1I-Vww" secondAttribute="centerX" id="XqO-2i-1It"/>
+                            <constraint firstItem="diH-Ii-w2d" firstAttribute="top" secondItem="L2C-1I-Vww" secondAttribute="bottom" id="bfo-Cv-n57"/>
+                            <constraint firstItem="u2w-zc-yyk" firstAttribute="centerX" secondItem="L2C-1I-Vww" secondAttribute="centerX" id="eIf-Tg-vlU"/>
+                            <constraint firstItem="gZX-zq-BU1" firstAttribute="top" secondItem="diH-Ii-w2d" secondAttribute="bottom" constant="30" id="k7b-HG-ZdL"/>
+                            <constraint firstItem="xhX-Ax-bdu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-70" id="lUS-AN-2mC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="u2w-zc-yyk" secondAttribute="bottom" id="sGq-4M-SsT"/>
+                            <constraint firstItem="L2C-1I-Vww" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="140" id="vVR-lx-TlZ"/>
+                            <constraint firstItem="xhX-Ax-bdu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x9u-Sh-Tc8"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="69.293478260869577"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backgroundLight" width="1545" height="630"/>
+        <image name="facebookimage" width="69" height="129"/>
+        <image name="loginbutton" width="798" height="174"/>
+    </resources>
 </document>

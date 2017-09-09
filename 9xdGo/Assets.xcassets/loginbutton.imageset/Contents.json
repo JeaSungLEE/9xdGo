@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "purchaseButtonImage.png",
+      "filename" : "loginbutton.png",
       "scale" : "1x"
     },
     {

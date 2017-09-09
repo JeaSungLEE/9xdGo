@@ -27,7 +27,6 @@
 		3F9B88B41F63E39800A542EF /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B88B31F63E39800A542EF /* ProductDetailViewController.swift */; };
 		3F9B88B61F6404D400A542EF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9B88B51F6404D400A542EF /* CoreLocation.framework */; };
 		3F9B88BA1F6408C100A542EF /* moris9.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B88B91F6406F800A542EF /* moris9.ttf */; };
-		3F9B88BC1F640D2600A542EF /* statusbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B88BB1F640D2600A542EF /* statusbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +51,6 @@
 		3F9B88B31F63E39800A542EF /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		3F9B88B51F6404D400A542EF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3F9B88B91F6406F800A542EF /* moris9.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = moris9.ttf; sourceTree = "<group>"; };
-		3F9B88BB1F640D2600A542EF /* statusbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = statusbar.swift; path = ../statusbar.swift; sourceTree = "<group>"; };
 		52C4860B2F90D48FF1A45D6B /* Pods-9xdGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-9xdGo.release.xcconfig"; path = "Pods/Target Support Files/Pods-9xdGo/Pods-9xdGo.release.xcconfig"; sourceTree = "<group>"; };
 		807342360B74F7582D67ED53 /* Pods_9xdGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_9xdGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E5861DB585A6FD9C5E14DD /* Pods-9xdGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-9xdGo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-9xdGo/Pods-9xdGo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 		3F9B88861F63A36A00A542EF /* 9xdGo */ = {
 			isa = PBXGroup;
 			children = (
-				3F9B88BB1F640D2600A542EF /* statusbar.swift */,
 				3F9B88B01F63E32F00A542EF /* Product */,
 				3C4EC8461F63CB3100A73859 /* Login */,
 				3F9B88A21F63B0B700A542EF /* MainView */,
@@ -325,7 +322,6 @@
 				3CEB15C91F63AB0F001FAF94 /* LoginViewController.swift in Sources */,
 				3C4EC84B1F63D56200A73859 /* UserInfoService.swift in Sources */,
 				3F9B88A01F63B0B300A542EF /* MainViewController.swift in Sources */,
-				3F9B88BC1F640D2600A542EF /* statusbar.swift in Sources */,
 				3C4EC8481F63CBE200A73859 /* NetworkService.swift in Sources */,
 				3C4EC84D1F63FB0C00A73859 /* UserDefaultsService.swift in Sources */,
 				3F9B88AD1F63C07B00A542EF /* PinList.swift in Sources */,

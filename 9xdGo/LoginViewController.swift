@@ -12,11 +12,15 @@ import FBSDKLoginKit
 import SwiftyJSON
 
 class LoginViewController: UIViewController {
+    let loginButton = FBSDKLoginButton()
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let loginButton = FBSDKLoginButton()
-        loginButton.center = view.center
+        loginButton.frame = CGRect(x: -100, y: -100, width: 0, height: 0)
         view.addSubview(loginButton)
         
         // set facebook login permission
@@ -60,6 +64,10 @@ class LoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func facebookButtonAction(_ sender: UIButton) {
+        loginButton.sendActions(for: .touchUpInside)
     }
 }
 
