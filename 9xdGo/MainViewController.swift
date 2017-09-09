@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import FBSDKLoginKit
 
 class MainViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var profileImageView: UIImageView!
@@ -48,10 +49,16 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if isLogin() {
+        if !isLogin() {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
             self.present(controller, animated: true, completion: nil)
+        } else {
+            UserInfoService.shared.delegate = self
+            if let accessToken = FBSDKAccessToken.current(),
+                let profile = FBSDKProfile.current() {
+                UserInfoService.shared.fetchUserInfo(accessToken: accessToken, profile: profile)
+            }
         }
     }
     
@@ -94,8 +101,12 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         profileName.text = productNameArray[index]
     }
     
-    private func isLogin() -> Bool{
-        return UserDefaultsService.shared.isLogin
+    private func isLogin() -> Bool {
+        if FBSDKAccessToken.current() != nil {
+            return true
+        } else {
+            return false
+        }
     }
     
     @IBAction func purchaseButtonAction(_ sender: UIButton) {
@@ -115,3 +126,9 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     }
 }
 
+extension MainViewController: UserInfoServiceDelegate {
+    func userInfo(didUpdateUserInfo userInfo: UserInfo) {
+        // update ui
+        print("user info : \(userInfo)")
+    }
+}

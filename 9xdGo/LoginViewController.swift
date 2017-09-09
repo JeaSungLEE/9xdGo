@@ -13,7 +13,6 @@ import SwiftyJSON
 
 class LoginViewController: UIViewController {
     
-    let profileImageSize = CGSize(width: 200, height: 200)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +25,13 @@ class LoginViewController: UIViewController {
         loginButton.readPermissions = ["public_profile", "email"]
         loginButton.delegate = self
         
+        UserInfoService.shared.delegate = self
+        
         FBSDKProfile.enableUpdates(onAccessTokenChange: true)
         NotificationCenter.default.addObserver(self, selector: #selector(didReceiveCurrentProfile(notification:)), name: NSNotification.Name.FBSDKProfileDidChange, object: nil)
     }
     
-    private func sign(userInfo: UserInfo) {
+    func sign(userInfo: UserInfo) {
         NetworkService.shared.postFacebookSign(
             id: userInfo.fbId,
             token: userInfo.authToken,
@@ -41,7 +42,6 @@ class LoginViewController: UIViewController {
             let data = JSON($0)
             let id = data["id"].stringValue
             UserDefaultsService.shared.id = id
-            UserDefaultsService.shared.isLogin = true
             self.dismiss(animated: true)
         }
     }
@@ -49,14 +49,7 @@ class LoginViewController: UIViewController {
     func getUserInfo() {
         if let accessToken = FBSDKAccessToken.current(),
             let profile = FBSDKProfile.current() {
-            let myInfo = UserInfo(
-                fbId: accessToken.userID,
-                authToken: accessToken.tokenString,
-                name: profile.name,
-                thumnailURLStr: profile.imageURL(for: .square, size: profileImageSize).absoluteString
-            )
-            UserInfoService.shared.myInfo = myInfo
-            sign(userInfo: myInfo)
+            UserInfoService.shared.fetchUserInfo(accessToken: accessToken, profile: profile)
         }
     }
     
@@ -88,6 +81,13 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
             print("facebook login cancelled")
         } else {
             print("facebook login succeeded")
+            self.getUserInfo()
         }
+    }
+}
+
+extension LoginViewController: UserInfoServiceDelegate {
+    func userInfo(didUpdateUserInfo userInfo: UserInfo) {
+        self.sign(userInfo: userInfo)
     }
 }
