@@ -18,7 +18,7 @@ class MainViewController: UIViewController {
         setProfileImage()
     }
     
-    func setProfileImage() {
+    private func setProfileImage() {
         profileImageView.layer.masksToBounds = true
         profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
     }
