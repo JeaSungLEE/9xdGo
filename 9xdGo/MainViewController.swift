@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 import FBSDKLoginKit
 import SwiftyJSON
+import SDWebImage
 
 class MainViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var profileImageView: UIImageView!
@@ -103,9 +104,10 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         
         let index = sender.tag
         
-        guard self.dataSource.count > 0 else { return }
-        profileImageView.image = productArray[index]
-        profileName.text = dataSource[index].products.first?.name
+        guard self.dataSource.count > 0,
+            let product = dataSource[index].products.first else { return }
+        profileImageView.sd_setImage(with: product.imageURL)
+        profileName.text = product.name
     }
     
     private func isLogin() -> Bool {
