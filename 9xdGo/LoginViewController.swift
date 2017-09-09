@@ -11,6 +11,8 @@ import UIKit
 import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
+    
+    private let profileImageSize = CGSize(width: 200, height: 200)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,15 +21,27 @@ class LoginViewController: UIViewController {
         loginButton.center = view.center
         view.addSubview(loginButton)
         
+        // set facebook login permission
+        loginButton.readPermissions = ["public_profile", "email"]
+        loginButton.delegate = self
+        
         if let accessToken = FBSDKAccessToken.current() {
+            // login success
             print("Facebook Login token : " + accessToken.tokenString)
             print("ID : " + accessToken.userID)
             print("permissions : " + accessToken.permissions.debugDescription)
         }
         
-        // facebook login permission
-        loginButton.readPermissions = ["public_profile", "email"]
-        
+        FBSDKProfile.enableUpdates(onAccessTokenChange: true)
+        NotificationCenter.default.addObserver(self, selector: #selector(didReceiveCurrentProfile(notification:)), name: NSNotification.Name.FBSDKProfileDidChange, object: nil)
+    }
+    
+    func didReceiveCurrentProfile(notification: NSNotification) {
+        if let profile = FBSDKProfile.current() {
+            print("profile")
+            print("name : " + profile.name)
+            print("imageURL : " + profile.imageURL(for:.square , size: profileImageSize).absoluteString)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,4 +60,25 @@ class LoginViewController: UIViewController {
     }
     */
 
+}
+
+extension LoginViewController: FBSDKLoginButtonDelegate {
+    func loginButtonWillLogin(_ loginButton: FBSDKLoginButton!) -> Bool {
+        print("loginButtonWillLogin")
+        return true
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print("loginButtonDidLogOut")
+    }
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if let error = error {
+            print("facebook login error : \(error.localizedDescription)")
+        } else if result.isCancelled {
+            print("facebook login cancelled")
+        } else {
+            print("facebook login succeeded")
+        }
+    }
 }
