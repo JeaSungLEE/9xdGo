@@ -54,6 +54,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
             self.present(controller, animated: true, completion: nil)
         } else {
             UserInfoService.shared.delegate = self
+            UserDefaultsService.shared.id = 0
             if let accessToken = FBSDKAccessToken.current(),
                 let profile = FBSDKProfile.current() {
                 UserInfoService.shared.fetchUserInfo(accessToken: accessToken, profile: profile)

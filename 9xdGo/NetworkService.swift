@@ -50,4 +50,9 @@ class NetworkService {
         ]
         self.request(url: url, method: .post, encoding: JSONEncoding.default, params: params, completion: completion)
     }
+    
+    func getPlace(userId: Int, _ completion: JSONResultHandler) {
+        let url = baseURL + "place?userId=\(userId)"
+        self.request(url: url, method: .get, encoding: URLEncoding.default, params: [:], completion: completion)
+    }
 }
