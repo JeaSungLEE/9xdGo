@@ -27,6 +27,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     private let productNameArray: [String] = ["Yellow Hood", "Stickers", "Long MousePad"]
     
     var dataSource: [Place] = []
+    var pins: [UIButton] = []
     
     let locationManager = CLLocationManager()
     
@@ -142,6 +143,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         index += 1
         
         pin.center = pinItem.point
+        self.pins.append(pin)
         
         mapImageView.addSubview(pin)
     }
@@ -199,12 +201,12 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     
     func requestPlace() {
         let userId = UserDefaultsService.shared.id
-        print("request plase userid = \(userId)")
+        print("request place userid = \(userId)")
         if userId != 0 {
             NetworkService.shared.getPlace(userId: userId, { [weak self] (data) in
                 guard let `self` = self else { return }
                 let json = JSON(data)
-                self.dataSource = json.arrayValue.map { Place(json: $0) }
+                self.dataSource = json.arrayValue.map { Place(json: $0) }.sorted { $0.0.id < $0.1.id }
                 self.updateConquest()
             })
         }
@@ -215,6 +217,12 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         let conquestedCount = dataSource.filter { $0.isConquested }.count
         let percent = Int(Float(conquestedCount) / Float(dataSource.count) * 100)
         self.completeLabel.text = "\(name)님\n \(percent)% 정복"
+        
+        for (index, place) in dataSource.enumerated() {
+            if place.isConquested {
+                pins[index].setBackgroundImage(#imageLiteral(resourceName: "selectStar"), for: .normal)
+            }
+        }
     }
     
 }
