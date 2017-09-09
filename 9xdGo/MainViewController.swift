@@ -212,7 +212,8 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     
     func updateConquest() {
         let name = UserInfoService.shared.myInfo.name
-        let percent = dataSource.filter { $0.isConquested }.count / dataSource.count * 100
+        let conquestedCount = dataSource.filter { $0.isConquested }.count
+        let percent = Int(Float(conquestedCount) / Float(dataSource.count) * 100)
         self.completeLabel.text = "\(name)님\n \(percent)% 정복"
     }
     
