@@ -12,6 +12,8 @@ class MainViewController: UIViewController {
     @IBOutlet var profileImageView: UIImageView!
     @IBOutlet var profileName: UILabel!
     @IBOutlet var mapImageView: UIImageView!
+    private var index = 0
+    private let profileViewHeight: CGFloat = 100
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,7 @@ class MainViewController: UIViewController {
     }
     
     private func makePins() {
-        let pinList = PinList.init()
+        let pinList = PinList.init(mapHeight: getScreenSize().height - profileViewHeight)
         
         for pinItem in pinList.pinList {
             setPin(pinItem: pinItem)
@@ -34,16 +36,21 @@ class MainViewController: UIViewController {
     }
     
     private func setPin(pinItem: PinModel) {
-        let pin = UIImageView(image: pinItem.image)
+        let pin = UIButton(type: .custom)
+        pin.setBackgroundImage(pinItem.image, for: .normal)
         pin.frame = CGRect(origin: .zero, size: pinItem.size)
+        pin.tag = index
         
-        let newPointX = pinItem.point.x
-        let newPointY = pinItem.point.y
-        let newPoint = CGPoint(x: newPointX, y: newPointY)
+        pin.addTarget(self, action: #selector(self.selectPin(_:)), for: .touchUpInside)
+        index += 1
         
-        pin.center = newPoint
+        pin.center = pinItem.point
         
-        self.mapImageView.addSubview(pin)
+        mapImageView.addSubview(pin)
+    }
+    
+    func selectPin(_ sender: UIButton) {
+        print(sender.tag)
     }
     
     override func didReceiveMemoryWarning() {

@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy" translatesAutoresizingMaskIntoConstraints="NO" id="GXS-UQ-RxB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy" translatesAutoresizingMaskIntoConstraints="NO" id="GXS-UQ-RxB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="636"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZp-Ri-A4g" customClass="ProfileFloatingView" customModule="_xdGo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="636" width="414" height="100"/>
@@ -62,11 +62,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LZp-Ri-A4g" firstAttribute="leading" secondItem="llE-3t-5y9" secondAttribute="leading" id="Ba2-rY-gAG"/>
-                            <constraint firstItem="AUs-dY-cHL" firstAttribute="top" secondItem="LZp-Ri-A4g" secondAttribute="bottom" id="EhQ-Fo-qye"/>
                             <constraint firstItem="GXS-UQ-RxB" firstAttribute="leading" secondItem="llE-3t-5y9" secondAttribute="leading" id="HAJ-Rv-FNF"/>
-                            <constraint firstAttribute="bottom" secondItem="GXS-UQ-RxB" secondAttribute="bottom" id="I6f-FT-gdK"/>
                             <constraint firstAttribute="trailing" secondItem="LZp-Ri-A4g" secondAttribute="trailing" id="SQE-JF-2VV"/>
+                            <constraint firstItem="LZp-Ri-A4g" firstAttribute="top" secondItem="GXS-UQ-RxB" secondAttribute="bottom" id="XNq-Tc-poL"/>
                             <constraint firstAttribute="trailing" secondItem="GXS-UQ-RxB" secondAttribute="trailing" id="Yrz-8x-c83"/>
+                            <constraint firstItem="AUs-dY-cHL" firstAttribute="top" secondItem="LZp-Ri-A4g" secondAttribute="bottom" id="fal-wg-3Hj"/>
                             <constraint firstItem="GXS-UQ-RxB" firstAttribute="top" secondItem="llE-3t-5y9" secondAttribute="top" id="qhc-7Y-vBn"/>
                         </constraints>
                     </view>
@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Or-cP-85E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-452" y="-1137"/>
+            <point key="canvasLocation" x="-452.17391304347831" y="-1137.2282608695652"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="PhX-Wj-82R">

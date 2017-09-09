@@ -8,14 +8,15 @@
 
 import UIKit
 
-private let pinSize: CGFloat = 30
+private let pinSize: CGFloat = 20
 private let defaultMapWidth: CGFloat = 1674
 private let defaultMapHeight: CGFloat = 1674
 
-private let pinAxisList = [CGPoint(x: 600, y: 600),
-                           CGPoint(x: 1000, y: 1000)]
+private let pinAxisList = [CGPoint(x: 100, y: 100),
+                           CGPoint(x: 1674, y: 1674)]
 
 class PinList {
+    private var mapHeight: CGFloat?
     var pinList = [PinModel]()
     
     func itemAppend(point: CGPoint, image: UIImage, size: CGSize) -> PinModel {
@@ -26,7 +27,9 @@ class PinList {
         return item
     }
     
-    init() {
+    init(mapHeight: CGFloat) {
+        self.mapHeight = mapHeight
+        
         for axis in pinAxisList {
             let size = CGSize(width: pinSize, height: pinSize)
             let item = itemAppend(point: axis, image: #imageLiteral(resourceName: "redPin"), size: size)
@@ -36,9 +39,15 @@ class PinList {
     
     private func calculatorPinFrame(point: CGPoint) -> CGPoint {
         let newX = (point.x / defaultMapWidth) * getScreenSize().width
-        let newY = (point.y / defaultMapHeight) * getScreenSize().height
+        let newY = (point.y / defaultMapHeight) * getScreenSize().width + calculatorImageTopInset()
         let newFrame = CGPoint(x: newX, y: newY)
         
         return newFrame
+    }
+    
+    private func calculatorImageTopInset() -> CGFloat {
+        guard let mapHeight = mapHeight else { return 0 }
+        let topInset: CGFloat = mapHeight - (defaultMapHeight / (defaultMapWidth / getScreenSize().width))
+        return topInset / 2
     }
 }

@@ -11,3 +11,7 @@ import UIKit
 func getScreenSize() -> CGRect {
     return UIScreen.main.bounds
 }
+
+func getStatusBarSize() -> CGRect {
+    return UIApplication.shared.statusBarFrame
+}
