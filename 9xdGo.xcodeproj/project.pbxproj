@@ -292,7 +292,6 @@
 				3F9B88A01F63B0B300A542EF /* MainViewController.swift in Sources */,
 				3C4EC8481F63CBE200A73859 /* NetworkService.swift in Sources */,
 				3F9B88AD1F63C07B00A542EF /* PinList.swift in Sources */,
-				3F9B888A1F63A36A00A542EF /* ViewController.swift in Sources */,
 				3F9B88881F63A36A00A542EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

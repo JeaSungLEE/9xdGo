@@ -22,6 +22,14 @@ class MainViewController: UIViewController {
         makePins()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if !isLogin() {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
+    
     private func setProfileImage() {
         profileImageView.layer.masksToBounds = true
         profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
@@ -51,6 +59,10 @@ class MainViewController: UIViewController {
     
     func selectPin(_ sender: UIButton) {
         print(sender.tag)
+    }
+    
+    private func isLogin() -> Bool{
+        return false
     }
     
     override func didReceiveMemoryWarning() {
