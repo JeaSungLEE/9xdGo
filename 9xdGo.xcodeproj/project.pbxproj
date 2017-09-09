@@ -19,6 +19,9 @@
 		3F9B889D1F63A59200A542EF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9B889B1F63A59200A542EF /* FBSDKLoginKit.framework */; };
 		3F9B88A01F63B0B300A542EF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B889E1F63B0B300A542EF /* MainViewController.swift */; };
 		3F9B88A41F63B1D600A542EF /* MapStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B88A31F63B1D600A542EF /* MapStoryboard.storyboard */; };
+		3F9B88AA1F63C04200A542EF /* PinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B88A91F63C04200A542EF /* PinModel.swift */; };
+		3F9B88AD1F63C07B00A542EF /* PinList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B88AC1F63C07B00A542EF /* PinList.swift */; };
+		3F9B88AF1F63C0B600A542EF /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B88AE1F63C0B600A542EF /* Macro.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		3F9B889B1F63A59200A542EF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		3F9B889E1F63B0B300A542EF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3F9B88A31F63B1D600A542EF /* MapStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapStoryboard.storyboard; sourceTree = "<group>"; };
+		3F9B88A91F63C04200A542EF /* PinModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinModel.swift; sourceTree = "<group>"; };
+		3F9B88AC1F63C07B00A542EF /* PinList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinList.swift; sourceTree = "<group>"; };
+		3F9B88AE1F63C0B600A542EF /* Macro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Macro.swift; sourceTree = "<group>"; };
 		52C4860B2F90D48FF1A45D6B /* Pods-9xdGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-9xdGo.release.xcconfig"; path = "Pods/Target Support Files/Pods-9xdGo/Pods-9xdGo.release.xcconfig"; sourceTree = "<group>"; };
 		807342360B74F7582D67ED53 /* Pods_9xdGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_9xdGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E5861DB585A6FD9C5E14DD /* Pods-9xdGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-9xdGo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-9xdGo/Pods-9xdGo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +91,7 @@
 				3F9B888E1F63A36A00A542EF /* Assets.xcassets */,
 				3F9B88901F63A36A00A542EF /* LaunchScreen.storyboard */,
 				3F9B88931F63A36A00A542EF /* Info.plist */,
+				3F9B88AE1F63C0B600A542EF /* Macro.swift */,
 			);
 			path = 9xdGo;
 			sourceTree = "<group>";
@@ -101,10 +108,20 @@
 		3F9B88A21F63B0B700A542EF /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				3F9B88AB1F63C06A00A542EF /* Pin */,
 				3F9B889E1F63B0B300A542EF /* MainViewController.swift */,
 				3F9B88A31F63B1D600A542EF /* MapStoryboard.storyboard */,
 			);
 			name = MainView;
+			sourceTree = "<group>";
+		};
+		3F9B88AB1F63C06A00A542EF /* Pin */ = {
+			isa = PBXGroup;
+			children = (
+				3F9B88A91F63C04200A542EF /* PinModel.swift */,
+				3F9B88AC1F63C07B00A542EF /* PinList.swift */,
+			);
+			name = Pin;
 			sourceTree = "<group>";
 		};
 		92BD74D655336C3CD09F6224 /* Frameworks */ = {
@@ -249,8 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9B88AA1F63C04200A542EF /* PinModel.swift in Sources */,
+				3F9B88AF1F63C0B600A542EF /* Macro.swift in Sources */,
 				3CEB15C91F63AB0F001FAF94 /* LoginViewController.swift in Sources */,
 				3F9B88A01F63B0B300A542EF /* MainViewController.swift in Sources */,
+				3F9B88AD1F63C07B00A542EF /* PinList.swift in Sources */,
 				3F9B888A1F63A36A00A542EF /* ViewController.swift in Sources */,
 				3F9B88881F63A36A00A542EF /* AppDelegate.swift in Sources */,
 			);
