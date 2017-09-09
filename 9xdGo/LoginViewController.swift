@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(didReceiveCurrentProfile(notification:)), name: NSNotification.Name.FBSDKProfileDidChange, object: nil)
     }
     
-    func sign(userInfo: UserInfo) {
+    private func sign(userInfo: UserInfo) {
         NetworkService.shared.postFacebookSign(
             id: userInfo.fbId,
             token: userInfo.authToken,

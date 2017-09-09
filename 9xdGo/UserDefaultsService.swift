@@ -26,6 +26,12 @@ class UserDefaultsService {
         }
     }
     
+    func initiate() {
+        standard.register(defaults: [
+            UserDefaultsType.isLogin.key() : false
+        ])
+    }
+    
     var isLogin: Bool {
         get {
             return standard.bool(forKey: UserDefaultsType.isLogin.key())
