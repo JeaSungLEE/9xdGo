@@ -39,7 +39,7 @@ class NetworkService {
                     if success {
                         // sign success
                         if let completion = completion {
-                            completion(json["data"])
+                            completion(json["data"].object)
                         }
                     } else {
                         // sign failure

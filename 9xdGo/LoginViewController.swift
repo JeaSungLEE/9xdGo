@@ -40,6 +40,7 @@ class LoginViewController: UIViewController {
             let data = JSON($0)
             let id = data["id"].stringValue
             UserDefaultsService.shared.id = id
+            print("user id : \(id)")
             self.dismiss(animated: true)
         }
     }
