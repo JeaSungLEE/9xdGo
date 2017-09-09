@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		112ED0EC755705A91CF3D6A7 /* Pods_9xdGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807342360B74F7582D67ED53 /* Pods_9xdGo.framework */; };
 		3C4EC8451F63B66400A73859 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4EC8441F63B66400A73859 /* Bolts.framework */; };
+		3C4EC8481F63CBE200A73859 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC8471F63CBE200A73859 /* NetworkService.swift */; };
+		3C4EC84B1F63D56200A73859 /* UserInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC84A1F63D56200A73859 /* UserInfoService.swift */; };
 		3CEB15C91F63AB0F001FAF94 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEB15C81F63AB0F001FAF94 /* LoginViewController.swift */; };
 		3F9B88881F63A36A00A542EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B88871F63A36A00A542EF /* AppDelegate.swift */; };
-		3F9B888A1F63A36A00A542EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B88891F63A36A00A542EF /* ViewController.swift */; };
 		3F9B888D1F63A36A00A542EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B888B1F63A36A00A542EF /* Main.storyboard */; };
 		3F9B888F1F63A36A00A542EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B888E1F63A36A00A542EF /* Assets.xcassets */; };
 		3F9B88921F63A36A00A542EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B88901F63A36A00A542EF /* LaunchScreen.storyboard */; };
@@ -26,10 +27,11 @@
 
 /* Begin PBXFileReference section */
 		3C4EC8441F63B66400A73859 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		3C4EC8471F63CBE200A73859 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3C4EC84A1F63D56200A73859 /* UserInfoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoService.swift; sourceTree = "<group>"; };
 		3CEB15C81F63AB0F001FAF94 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3F9B88841F63A36A00A542EF /* 9xdGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 9xdGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9B88871F63A36A00A542EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F9B88891F63A36A00A542EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F9B888C1F63A36A00A542EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F9B888E1F63A36A00A542EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F9B88911F63A36A00A542EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +63,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C4EC8461F63CB3100A73859 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3CEB15C81F63AB0F001FAF94 /* LoginViewController.swift */,
+				3F9B888B1F63A36A00A542EF /* Main.storyboard */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		3C4EC8491F63CE5A00A73859 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3C4EC8471F63CBE200A73859 /* NetworkService.swift */,
+				3C4EC84A1F63D56200A73859 /* UserInfoService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		3F9B887B1F63A36A00A542EF = {
 			isa = PBXGroup;
 			children = (
@@ -82,12 +102,11 @@
 		3F9B88861F63A36A00A542EF /* 9xdGo */ = {
 			isa = PBXGroup;
 			children = (
+				3C4EC8461F63CB3100A73859 /* Login */,
 				3F9B88A21F63B0B700A542EF /* MainView */,
+				3C4EC8491F63CE5A00A73859 /* Service */,
 				3F9B88991F63A51000A542EF /* Framworks */,
 				3F9B88871F63A36A00A542EF /* AppDelegate.swift */,
-				3F9B88891F63A36A00A542EF /* ViewController.swift */,
-				3CEB15C81F63AB0F001FAF94 /* LoginViewController.swift */,
-				3F9B888B1F63A36A00A542EF /* Main.storyboard */,
 				3F9B888E1F63A36A00A542EF /* Assets.xcassets */,
 				3F9B88901F63A36A00A542EF /* LaunchScreen.storyboard */,
 				3F9B88931F63A36A00A542EF /* Info.plist */,
@@ -269,7 +288,9 @@
 				3F9B88AA1F63C04200A542EF /* PinModel.swift in Sources */,
 				3F9B88AF1F63C0B600A542EF /* Macro.swift in Sources */,
 				3CEB15C91F63AB0F001FAF94 /* LoginViewController.swift in Sources */,
+				3C4EC84B1F63D56200A73859 /* UserInfoService.swift in Sources */,
 				3F9B88A01F63B0B300A542EF /* MainViewController.swift in Sources */,
+				3C4EC8481F63CBE200A73859 /* NetworkService.swift in Sources */,
 				3F9B88AD1F63C07B00A542EF /* PinList.swift in Sources */,
 				3F9B888A1F63A36A00A542EF /* ViewController.swift in Sources */,
 				3F9B88881F63A36A00A542EF /* AppDelegate.swift in Sources */,
