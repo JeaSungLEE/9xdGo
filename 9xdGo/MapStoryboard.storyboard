@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LGX-fr-MwF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LGX-fr-MwF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,7 +46,6 @@
                                     </imageView>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="lw2-Qc-trx">
                                         <rect key="frame" x="180" y="35" width="150" height="47"/>
-
                                         <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -83,7 +82,7 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="테두리" translatesAutoresizingMaskIntoConstraints="NO" id="jDR-fQ-l4j">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="테두리" translatesAutoresizingMaskIntoConstraints="NO" id="jDR-fQ-l4j">
                                         <rect key="frame" x="45" y="30" width="125" height="125"/>
                                     </imageView>
                                 </subviews>
@@ -176,12 +175,12 @@
                                 <state key="normal" title="Purchase" backgroundImage="purchaseButtonImage"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejQ-dD-X3g">
-                                <rect key="frame" x="16" y="40" width="30" height="30"/>
+                                <rect key="frame" x="329" y="40" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="YPn-Jn-mZs"/>
                                     <constraint firstAttribute="height" constant="30" id="p7Z-DP-5Di"/>
                                 </constraints>
-                                <state key="normal" image="closeButton"/>
+                                <state key="normal" image="closeImage"/>
                                 <connections>
                                     <action selector="closteButtonAction:" destination="Rmi-og-BOb" eventType="touchUpInside" id="unS-gL-J8k"/>
                                 </connections>
@@ -236,7 +235,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="AhQ-Pa-Gro" secondAttribute="trailing" id="XRQ-L7-yC3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rw6-SS-Rap" secondAttribute="trailing" id="Y87-GL-PVR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4DG-Eg-otB" secondAttribute="trailing" id="mUc-op-8V2"/>
-                            <constraint firstItem="ejQ-dD-X3g" firstAttribute="leading" secondItem="Kq9-hq-3j5" secondAttribute="leadingMargin" id="qGn-hU-hO6"/>
+                            <constraint firstItem="ejQ-dD-X3g" firstAttribute="trailing" secondItem="Kq9-hq-3j5" secondAttribute="trailingMargin" id="qGn-hU-hO6"/>
                             <constraint firstItem="5eR-s2-d9X" firstAttribute="top" secondItem="AhQ-Pa-Gro" secondAttribute="bottom" constant="20" id="zGb-o7-TfO"/>
                         </constraints>
                     </view>
@@ -254,10 +253,10 @@
     <resources>
         <image name="background" width="1854" height="2469"/>
         <image name="chatting" width="996" height="507"/>
-        <image name="closeButton" width="600" height="600"/>
+        <image name="closeImage" width="600" height="600"/>
         <image name="product" width="800" height="526"/>
         <image name="purchaseButtonImage" width="447" height="153"/>
         <image name="starbackground" width="1083" height="1095"/>
-        <image name="테두리" width="137" height="135"/>
+        <image name="테두리" width="137" height="135"/>
     </resources>
 </document>
