@@ -16,6 +16,7 @@
 		3C619C1A1F642D8600B36FC4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C619C191F642D8600B36FC4 /* Product.swift */; };
 		3C9F607C1F6467A400F215D4 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9F607B1F6467A400F215D4 /* Calculator.swift */; };
 		3CEB15C91F63AB0F001FAF94 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEB15C81F63AB0F001FAF94 /* LoginViewController.swift */; };
+		3F07BEA31F647DB40018177D /* CreditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07BEA21F647DB40018177D /* CreditViewController.swift */; };
 		3F9B88881F63A36A00A542EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B88871F63A36A00A542EF /* AppDelegate.swift */; };
 		3F9B888D1F63A36A00A542EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B888B1F63A36A00A542EF /* Main.storyboard */; };
 		3F9B888F1F63A36A00A542EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B888E1F63A36A00A542EF /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		3C619C191F642D8600B36FC4 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		3C9F607B1F6467A400F215D4 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		3CEB15C81F63AB0F001FAF94 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3F07BEA21F647DB40018177D /* CreditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditViewController.swift; sourceTree = "<group>"; };
 		3F9B88841F63A36A00A542EF /* 9xdGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 9xdGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9B88871F63A36A00A542EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F9B888C1F63A36A00A542EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				3C619C171F642BD800B36FC4 /* Place.swift */,
 				3F9B889E1F63B0B300A542EF /* MainViewController.swift */,
 				3F9B88A31F63B1D600A542EF /* MapStoryboard.storyboard */,
+				3F07BEA21F647DB40018177D /* CreditViewController.swift */,
 			);
 			name = MainView;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				3CEB15C91F63AB0F001FAF94 /* LoginViewController.swift in Sources */,
 				3C9F607C1F6467A400F215D4 /* Calculator.swift in Sources */,
 				3C4EC84B1F63D56200A73859 /* UserInfoService.swift in Sources */,
+				3F07BEA31F647DB40018177D /* CreditViewController.swift in Sources */,
 				3F9B88A01F63B0B300A542EF /* MainViewController.swift in Sources */,
 				3C4EC8481F63CBE200A73859 /* NetworkService.swift in Sources */,
 				3C4EC84D1F63FB0C00A73859 /* UserDefaultsService.swift in Sources */,
