@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LGX-fr-MwF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LGX-fr-MwF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -45,7 +45,7 @@
                                         <rect key="contentStretch" x="0.5" y="0.5" width="5.0000000000000002e-05" height="5.0000000000000002e-05"/>
                                     </imageView>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="lw2-Qc-trx">
-                                        <rect key="frame" x="180" y="35" width="150" height="29.5"/>
+                                        <rect key="frame" x="180" y="35" width="150" height="47"/>
                                         <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                                         <rect key="frame" x="180" y="90" width="150" height="60"/>
                                         <rect key="contentStretch" x="0.5" y="0.5" width="0.10000000000000001" height="0.0"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="M2K-AJ-9Bg"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="M2K-AJ-9Bg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="17"/>
                                         <state key="normal" title="Purchase" backgroundImage="purchaseButtonImage">
@@ -71,7 +71,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTy-MA-OMA">
-                                        <rect key="frame" x="182" y="69" width="11.5" height="47"/>
+                                        <rect key="frame" x="181" y="72.5" width="13.5" height="40"/>
                                         <attributedString key="attributedText">
                                             <fragment content=" ">
                                                 <attributes>
@@ -96,6 +96,7 @@
                                     <constraint firstAttribute="bottom" secondItem="Yyt-y0-wTG" secondAttribute="bottom" constant="50" id="Mu4-N4-vBv"/>
                                     <constraint firstItem="jDR-fQ-l4j" firstAttribute="leading" secondItem="Yyt-y0-wTG" secondAttribute="leading" constant="-5" id="PFs-FJ-KnN"/>
                                     <constraint firstItem="pzf-Sz-WQQ" firstAttribute="bottom" secondItem="Yyt-y0-wTG" secondAttribute="bottom" id="T81-Df-qkY"/>
+                                    <constraint firstItem="pzf-Sz-WQQ" firstAttribute="top" secondItem="lw2-Qc-trx" secondAttribute="bottom" constant="8" id="XCI-AA-8hL"/>
                                     <constraint firstItem="jDR-fQ-l4j" firstAttribute="top" secondItem="Yyt-y0-wTG" secondAttribute="top" constant="-5" id="Y2V-5s-yYR"/>
                                     <constraint firstItem="Lyv-Br-3HE" firstAttribute="leading" secondItem="LZp-Ri-A4g" secondAttribute="leading" constant="20" id="aNe-uJ-9vP"/>
                                     <constraint firstItem="jDR-fQ-l4j" firstAttribute="bottom" secondItem="Yyt-y0-wTG" secondAttribute="bottom" constant="5" id="dNd-n8-hcX"/>
@@ -191,13 +192,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOb-ic-FSj">
-                                <rect key="frame" x="16" y="405" width="78" height="35"/>
+                                <rect key="frame" x="16" y="405" width="80" height="30"/>
                                 <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="얘는 후드티입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IM-OS-EsI">
-                                <rect key="frame" x="16" y="455" width="128" height="20"/>
+                                <rect key="frame" x="16" y="450" width="128" height="17"/>
                                 <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

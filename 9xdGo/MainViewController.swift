@@ -98,7 +98,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
 //            self.view.layoutIfNeeded()
 //        }
 //        
-        UIView.animate(withDuration: 20, delay: 0, options: [.repeat, .autoreverse], animations: {
+        UIView.animate(withDuration: 20, delay: 0, options: [.repeat, .autoreverse, .curveLinear], animations: {
             self.firstBackTop.constant = 0
             self.firstBackBottom.constant = -80
             self.firstBackLeft.constant = getScreenSize().width

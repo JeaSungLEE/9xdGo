@@ -14,6 +14,7 @@
 		3C4EC84D1F63FB0C00A73859 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC84C1F63FB0C00A73859 /* UserDefaultsService.swift */; };
 		3C619C181F642BD800B36FC4 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C619C171F642BD800B36FC4 /* Place.swift */; };
 		3C619C1A1F642D8600B36FC4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C619C191F642D8600B36FC4 /* Product.swift */; };
+		3C9F607C1F6467A400F215D4 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9F607B1F6467A400F215D4 /* Calculator.swift */; };
 		3CEB15C91F63AB0F001FAF94 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEB15C81F63AB0F001FAF94 /* LoginViewController.swift */; };
 		3F9B88881F63A36A00A542EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B88871F63A36A00A542EF /* AppDelegate.swift */; };
 		3F9B888D1F63A36A00A542EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B888B1F63A36A00A542EF /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		3C4EC84C1F63FB0C00A73859 /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		3C619C171F642BD800B36FC4 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		3C619C191F642D8600B36FC4 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		3C9F607B1F6467A400F215D4 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		3CEB15C81F63AB0F001FAF94 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3F9B88841F63A36A00A542EF /* 9xdGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 9xdGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9B88871F63A36A00A542EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 			name = Service;
 			sourceTree = "<group>";
 		};
+		3C9F607A1F64678E00F215D4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3C9F607B1F6467A400F215D4 /* Calculator.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		3F9B887B1F63A36A00A542EF = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +131,7 @@
 				3C4EC8461F63CB3100A73859 /* Login */,
 				3F9B88A21F63B0B700A542EF /* MainView */,
 				3C4EC8491F63CE5A00A73859 /* Service */,
+				3C9F607A1F64678E00F215D4 /* Util */,
 				3F9B88991F63A51000A542EF /* Framworks */,
 				3F9B88871F63A36A00A542EF /* AppDelegate.swift */,
 				3F9B888E1F63A36A00A542EF /* Assets.xcassets */,
@@ -327,6 +338,7 @@
 				3F9B88B41F63E39800A542EF /* ProductDetailViewController.swift in Sources */,
 				3C619C181F642BD800B36FC4 /* Place.swift in Sources */,
 				3CEB15C91F63AB0F001FAF94 /* LoginViewController.swift in Sources */,
+				3C9F607C1F6467A400F215D4 /* Calculator.swift in Sources */,
 				3C4EC84B1F63D56200A73859 /* UserInfoService.swift in Sources */,
 				3F9B88A01F63B0B300A542EF /* MainViewController.swift in Sources */,
 				3C4EC8481F63CBE200A73859 /* NetworkService.swift in Sources */,
