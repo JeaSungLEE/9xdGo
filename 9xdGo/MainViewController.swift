@@ -82,7 +82,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     private func isLogin() -> Bool{
-        return false
+        return UserDefaultsService.shared.isLogin
     }
     
     @IBAction func purchaseButtonAction(_ sender: UIButton) {

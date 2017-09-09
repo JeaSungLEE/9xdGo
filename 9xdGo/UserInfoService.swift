@@ -20,12 +20,4 @@ class UserInfoService {
     
     var myInfo: UserInfo!
     
-    func sign() {
-        NetworkService.shared.postFacebookSign(
-            id: myInfo.fbId,
-            token: myInfo.authToken,
-            name: myInfo.name,
-            imageURL: myInfo.thumnailURLStr
-        )
-    }
 }

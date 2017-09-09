@@ -9,11 +9,11 @@
 import UIKit
 
 import FBSDKLoginKit
+import SwiftyJSON
 
 class LoginViewController: UIViewController {
     
     let profileImageSize = CGSize(width: 200, height: 200)
-    var isLogin = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,17 +26,29 @@ class LoginViewController: UIViewController {
         loginButton.readPermissions = ["public_profile", "email"]
         loginButton.delegate = self
         
-        signFacebook()
-        
         FBSDKProfile.enableUpdates(onAccessTokenChange: true)
         NotificationCenter.default.addObserver(self, selector: #selector(didReceiveCurrentProfile(notification:)), name: NSNotification.Name.FBSDKProfileDidChange, object: nil)
     }
     
-    func signFacebook() {
+    private func sign(userInfo: UserInfo) {
+        NetworkService.shared.postFacebookSign(
+            id: userInfo.fbId,
+            token: userInfo.authToken,
+            name: userInfo.name,
+            imageURL: userInfo.thumnailURLStr
+        ) { [weak self] in
+            guard let `self` = self else { return }
+            let data = JSON($0)
+            let id = data["id"].stringValue
+            UserDefaultsService.shared.id = id
+            UserDefaultsService.shared.isLogin = true
+            self.dismiss(animated: true)
+        }
+    }
+    
+    func getUserInfo() {
         if let accessToken = FBSDKAccessToken.current(),
-            let profile = FBSDKProfile.current(),
-            self.isLogin == false {
-            // login success
+            let profile = FBSDKProfile.current() {
             let myInfo = UserInfo(
                 fbId: accessToken.userID,
                 authToken: accessToken.tokenString,
@@ -44,15 +56,13 @@ class LoginViewController: UIViewController {
                 thumnailURLStr: profile.imageURL(for: .square, size: profileImageSize).absoluteString
             )
             UserInfoService.shared.myInfo = myInfo
-            UserInfoService.shared.sign()
-            self.isLogin = true
-            
-            // TODO: - Show MapStoryBoard
+            sign(userInfo: myInfo)
         }
     }
     
     func didReceiveCurrentProfile(notification: NSNotification) {
-        signFacebook()
+        // fb 로그인 성공시 호출
+        getUserInfo()
     }
 
     override func didReceiveMemoryWarning() {
