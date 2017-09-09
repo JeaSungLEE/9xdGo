@@ -12,7 +12,8 @@ import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
     
-    private let profileImageSize = CGSize(width: 200, height: 200)
+    let profileImageSize = CGSize(width: 200, height: 200)
+    var isLogin = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,23 +26,33 @@ class LoginViewController: UIViewController {
         loginButton.readPermissions = ["public_profile", "email"]
         loginButton.delegate = self
         
-        if let accessToken = FBSDKAccessToken.current() {
-            // login success
-            print("Facebook Login token : " + accessToken.tokenString)
-            print("ID : " + accessToken.userID)
-            print("permissions : " + accessToken.permissions.debugDescription)
-        }
+        signFacebook()
         
         FBSDKProfile.enableUpdates(onAccessTokenChange: true)
         NotificationCenter.default.addObserver(self, selector: #selector(didReceiveCurrentProfile(notification:)), name: NSNotification.Name.FBSDKProfileDidChange, object: nil)
     }
     
-    func didReceiveCurrentProfile(notification: NSNotification) {
-        if let profile = FBSDKProfile.current() {
-            print("profile")
-            print("name : " + profile.name)
-            print("imageURL : " + profile.imageURL(for:.square , size: profileImageSize).absoluteString)
+    func signFacebook() {
+        if let accessToken = FBSDKAccessToken.current(),
+            let profile = FBSDKProfile.current(),
+            self.isLogin == false {
+            // login success
+            let myInfo = UserInfo(
+                fbId: accessToken.userID,
+                authToken: accessToken.tokenString,
+                name: profile.name,
+                thumnailURLStr: profile.imageURL(for: .square, size: profileImageSize).absoluteString
+            )
+            UserInfoService.shared.myInfo = myInfo
+            UserInfoService.shared.sign()
+            self.isLogin = true
+            
+            // TODO: - Show MapStoryBoard
         }
+    }
+    
+    func didReceiveCurrentProfile(notification: NSNotification) {
+        signFacebook()
     }
 
     override func didReceiveMemoryWarning() {
