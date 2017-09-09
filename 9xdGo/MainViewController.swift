@@ -14,10 +14,12 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var profileImageView: UIImageView!
     @IBOutlet var profileName: UILabel!
     @IBOutlet var mapImageView: UIImageView!
+    @IBOutlet var chattingImageView: UIImageView!
+    
     private var index = 0
     private let profileViewHeight: CGFloat = 200
     private let productArray: [UIImage] = [#imageLiteral(resourceName: "product"), #imageLiteral(resourceName: "product1"), #imageLiteral(resourceName: "product2")]
-    private let productNameArray: [String] = ["후드티", "스티커", "패드"]
+    private let productNameArray: [String] = ["Yellow Hood", "Stickers", "Long MousePad"]
     
     let locationManager = CLLocationManager()
     
@@ -26,6 +28,8 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         
         setProfileImage()
         makePins()
+        
+        
         
         // Ask for Authorisation from the User.
         self.locationManager.requestAlwaysAuthorization()
@@ -40,6 +44,10 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.statusBarView?.backgroundColor = UIColor(red: 44/255.0, green: 43/255.0, blue: 43/255.0, alpha: 1)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         if !isLogin() {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -52,6 +60,11 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
                 UserInfoService.shared.fetchUserInfo(accessToken: accessToken, profile: profile)
             }
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        UIApplication.shared.statusBarView?.backgroundColor = .white
+        
     }
     
     private func setProfileImage() {
