@@ -13,31 +13,13 @@ class UserDefaultsService {
     let standard = UserDefaults.standard
 
     enum UserDefaultsType {
-        case isLogin
         case id
         
         func key() -> String {
             switch self {
-            case .isLogin:
-                return "isLogin"
             case .id:
                 return "id"
             }
-        }
-    }
-    
-    func initiate() {
-        standard.register(defaults: [
-            UserDefaultsType.isLogin.key() : false
-        ])
-    }
-    
-    var isLogin: Bool {
-        get {
-            return standard.bool(forKey: UserDefaultsType.isLogin.key())
-        }
-        set {
-            standard.set(newValue, forKey: UserDefaultsType.isLogin.key())
         }
     }
     
