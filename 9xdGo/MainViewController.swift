@@ -142,8 +142,15 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
                 guard let `self` = self else { return }
                 let json = JSON(data)
                 self.dataSource = json.arrayValue.map { Place(json: $0) }
+                self.updateConquest()
             })
         }
+    }
+    
+    func updateConquest() {
+        let name = UserInfoService.shared.myInfo.name
+        let percent = dataSource.filter { $0.isConquested }.count / dataSource.count * 100
+        self.completeLabel.text = "\(name)님\n \(percent)% 정복"
     }
     
 }
