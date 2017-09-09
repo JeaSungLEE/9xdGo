@@ -147,8 +147,20 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         
         guard self.dataSource.count > 0,
             let product = dataSource[index].products.first else { return }
-        profileImageView.sd_setImage(with: product.imageURL)
-        profileName.text = product.name
+        self.updateProductView(product: product, isConquested: dataSource[index].isConquested)
+    }
+    
+    func updateProductView(product: Product, isConquested: Bool) {
+        if isConquested {
+            profileImageView.sd_setImage(with: product.imageURL)
+            profileName.text = product.name
+            purchaseButton.isHidden = false
+        } else {
+            profileImageView.image = nil
+            profileImageView.backgroundColor = .black
+            profileName.text = "BLOCK"
+            purchaseButton.isHidden = true
+        }
     }
     
     private func isLogin() -> Bool {
