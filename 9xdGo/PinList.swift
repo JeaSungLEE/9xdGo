@@ -14,7 +14,9 @@ private let defaultMapHeight: CGFloat = 1164
 
 private let pinAxisList = [CGPoint(x: 570, y: 100),
                            CGPoint(x: 980, y: 320),
-                           CGPoint(x: 170, y: 320)]
+                           CGPoint(x: 170, y: 320),
+                           CGPoint(x: 160, y: 720),
+                           CGPoint(x: 1000, y: 750)]
 
 class PinList {
     private var mapHeight: CGFloat?

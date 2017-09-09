@@ -71,9 +71,9 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTy-MA-OMA">
-                                        <rect key="frame" x="100.5" y="41.5" width="175.5" height="103.5"/>
+                                        <rect key="frame" x="182" y="69" width="11.5" height="47"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="김진아 님, 60% 정복!">
+                                            <fragment content=" ">
                                                 <attributes>
                                                     <font key="NSFont" size="40" name="morris9"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
