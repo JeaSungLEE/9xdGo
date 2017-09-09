@@ -11,6 +11,7 @@
 		3C4EC8451F63B66400A73859 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4EC8441F63B66400A73859 /* Bolts.framework */; };
 		3C4EC8481F63CBE200A73859 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC8471F63CBE200A73859 /* NetworkService.swift */; };
 		3C4EC84B1F63D56200A73859 /* UserInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC84A1F63D56200A73859 /* UserInfoService.swift */; };
+		3C4EC84D1F63FB0C00A73859 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EC84C1F63FB0C00A73859 /* UserDefaultsService.swift */; };
 		3CEB15C91F63AB0F001FAF94 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEB15C81F63AB0F001FAF94 /* LoginViewController.swift */; };
 		3F9B88881F63A36A00A542EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B88871F63A36A00A542EF /* AppDelegate.swift */; };
 		3F9B888D1F63A36A00A542EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B888B1F63A36A00A542EF /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		3C4EC8441F63B66400A73859 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		3C4EC8471F63CBE200A73859 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		3C4EC84A1F63D56200A73859 /* UserInfoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoService.swift; sourceTree = "<group>"; };
+		3C4EC84C1F63FB0C00A73859 /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		3CEB15C81F63AB0F001FAF94 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3F9B88841F63A36A00A542EF /* 9xdGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 9xdGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9B88871F63A36A00A542EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				3C4EC8471F63CBE200A73859 /* NetworkService.swift */,
 				3C4EC84A1F63D56200A73859 /* UserInfoService.swift */,
+				3C4EC84C1F63FB0C00A73859 /* UserDefaultsService.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				3C4EC84B1F63D56200A73859 /* UserInfoService.swift in Sources */,
 				3F9B88A01F63B0B300A542EF /* MainViewController.swift in Sources */,
 				3C4EC8481F63CBE200A73859 /* NetworkService.swift in Sources */,
+				3C4EC84D1F63FB0C00A73859 /* UserDefaultsService.swift in Sources */,
 				3F9B88AD1F63C07B00A542EF /* PinList.swift in Sources */,
 				3F9B88881F63A36A00A542EF /* AppDelegate.swift in Sources */,
 			);
