@@ -71,7 +71,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTy-MA-OMA">
-                                        <rect key="frame" x="181" y="72.5" width="13.5" height="40"/>
+                                        <rect key="frame" x="182" y="69" width="11.5" height="47"/>
                                         <attributedString key="attributedText">
                                             <fragment content=" ">
                                                 <attributes>
@@ -199,13 +199,13 @@
                                         <rect key="contentStretch" x="0.5" y="0.5" width="0.10000000000000001" height="0.10000000000000001"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품명" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOb-ic-FSj">
-                                        <rect key="frame" x="30" y="25" width="283" height="30"/>
+                                        <rect key="frame" x="30" y="25" width="283" height="35"/>
                                         <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="얘는 후드티입니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IM-OS-EsI">
-                                        <rect key="frame" x="30" y="63" width="293" height="17"/>
+                                        <rect key="frame" x="30" y="68" width="293" height="20"/>
                                         <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

@@ -87,17 +87,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
             }
             self.requestPlace()
         }
-//        
-//        UIView.animate(withDuration: 2, delay: 0, options: [.repeat, .autoreverse], animations: {
-//            self.starTop.constant = -10
-//            self.starBottom.constant = 10
-//            self.view.layoutIfNeeded()
-//        }) { (t) in
-//            self.starTop.constant = 0
-//            self.starBottom.constant = 0
-//            self.view.layoutIfNeeded()
-//        }
-//        
+        
         UIView.animate(withDuration: 20, delay: 0, options: [.repeat, .autoreverse, .curveLinear], animations: {
             self.firstBackTop.constant = 0
             self.firstBackBottom.constant = -80
