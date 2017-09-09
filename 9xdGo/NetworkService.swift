@@ -19,6 +19,27 @@ class NetworkService {
     typealias JSONResultHandler = ((_ json: Any) -> Void)?
     typealias BooleanResultHandler = ((Bool) -> Void)?
     
+    private func request(url: String, method: HTTPMethod, encoding: ParameterEncoding, params: [String : Any], completion: JSONResultHandler) {
+        print("url : " + url)
+        print("params : " + params.debugDescription)
+        Alamofire.request(url, method: method, parameters: params, encoding: encoding, headers: nil)
+            .responseJSON { (response) in
+                switch response.result {
+                case .success(let value):
+                    print(value)
+                    let json = JSON(value)
+                    let success = json["success"].boolValue
+                    if success {
+                        if let completion = completion {
+                            completion(json["data"].object)
+                        }
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+        }
+    }
+    
     func postFacebookSign(id: String, token: String, name: String, imageURL: String, _ completion: JSONResultHandler) {
         let url = baseURL + "user/sign"
         let params: Parameters = [
@@ -27,27 +48,11 @@ class NetworkService {
             "authToken" : token,
             "name" : name
         ]
-        print("url : " + url)
-        print("params : " + params.debugDescription)
-        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil)
-            .responseJSON { (response) in
-                print(response.debugDescription)
-                switch response.result {
-                case .success(let value):
-                    let json = JSON(value)
-                    let success = json["success"].boolValue
-                    if success {
-                        // sign success
-                        if let completion = completion {
-                            completion(json["data"].object)
-                        }
-                    } else {
-                        // sign failure
-                    }
-                case .failure(let error):
-                    // request fail
-                    print(error.localizedDescription)
-                }
-        }
+        self.request(url: url, method: .post, encoding: JSONEncoding.default, params: params, completion: completion)
+    }
+    
+    func getPlace(userId: Int, _ completion: JSONResultHandler) {
+        let url = baseURL + "place?userId=\(userId)"
+        self.request(url: url, method: .get, encoding: URLEncoding.default, params: [:], completion: completion)
     }
 }

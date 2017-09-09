@@ -42,7 +42,7 @@ class LoginViewController: UIViewController {
         ) { [weak self] in
             guard let `self` = self else { return }
             let data = JSON($0)
-            let id = data["id"].stringValue
+            let id = data["id"].intValue
             UserDefaultsService.shared.id = id
             print("user id : \(id)")
             self.dismiss(animated: true)

@@ -23,9 +23,9 @@ class UserDefaultsService {
         }
     }
     
-    var id: String {
+    var id: Int {
         get {
-            return standard.string(forKey: UserDefaultsType.id.key()) ?? ""
+            return standard.integer(forKey: UserDefaultsType.id.key())
         }
         set {
             standard.set(newValue, forKey: UserDefaultsType.id.key())
