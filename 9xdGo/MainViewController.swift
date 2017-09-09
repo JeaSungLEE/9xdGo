@@ -9,6 +9,8 @@
 import UIKit
 import CoreLocation
 import FBSDKLoginKit
+import SwiftyJSON
+import SDWebImage
 
 class MainViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var profileImageView: UIImageView!
@@ -23,6 +25,8 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     private let profileViewHeight: CGFloat = 200
     private let productArray: [UIImage] = [#imageLiteral(resourceName: "product"), #imageLiteral(resourceName: "product1"), #imageLiteral(resourceName: "product2")]
     private let productNameArray: [String] = ["Yellow Hood", "Stickers", "Long MousePad"]
+    
+    var dataSource: [Place] = []
     
     let locationManager = CLLocationManager()
     
@@ -69,17 +73,19 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         if !isLogin() {
+            UserDefaultsService.shared.id = 0
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
             self.present(controller, animated: true, completion: nil)
         } else {
             UserInfoService.shared.delegate = self
-            UserDefaultsService.shared.id = 0
             if let accessToken = FBSDKAccessToken.current(),
                 let profile = FBSDKProfile.current() {
                 UserInfoService.shared.fetchUserInfo(accessToken: accessToken, profile: profile)
             }
+            self.requestPlace()
         }
 //        
 //        UIView.animate(withDuration: 2, delay: 0, options: [.repeat, .autoreverse], animations: {
@@ -149,8 +155,10 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         
         let index = sender.tag
         
-        profileImageView.image = productArray[index]
-        profileName.text = productNameArray[index]
+        guard self.dataSource.count > 0,
+            let product = dataSource[index].products.first else { return }
+        profileImageView.sd_setImage(with: product.imageURL)
+        profileName.text = product.name
     }
     
     private func isLogin() -> Bool {
@@ -176,6 +184,26 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         print("locations = \(locValue.latitude) \(locValue.longitude)")
     }
+    
+    func requestPlace() {
+        let userId = UserDefaultsService.shared.id
+        print("request plase userid = \(userId)")
+        if userId != 0 {
+            NetworkService.shared.getPlace(userId: userId, { [weak self] (data) in
+                guard let `self` = self else { return }
+                let json = JSON(data)
+                self.dataSource = json.arrayValue.map { Place(json: $0) }
+                self.updateConquest()
+            })
+        }
+    }
+    
+    func updateConquest() {
+        let name = UserInfoService.shared.myInfo.name
+        let percent = dataSource.filter { $0.isConquested }.count / dataSource.count * 100
+        self.completeLabel.text = "\(name)님\n \(percent)% 정복"
+    }
+    
 }
 
 extension MainViewController: UserInfoServiceDelegate {
