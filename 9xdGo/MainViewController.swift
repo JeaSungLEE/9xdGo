@@ -15,6 +15,8 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var profileName: UILabel!
     @IBOutlet var mapImageView: UIImageView!
     @IBOutlet var chattingImageView: UIImageView!
+    @IBOutlet var purchaseButton: UIButton!
+    @IBOutlet var completeLabel: UILabel!
     
     private var index = 0
     private let profileViewHeight: CGFloat = 200
@@ -26,10 +28,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setProfileImage()
         makePins()
-        
-        
         
         // Ask for Authorisation from the User.
         self.locationManager.requestAlwaysAuthorization()
@@ -67,11 +66,6 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    private func setProfileImage() {
-        profileImageView.layer.masksToBounds = true
-        profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
-    }
-    
     private func makePins() {
         let pinList = PinList.init(mapHeight: getScreenSize().height - profileViewHeight)
         
@@ -95,6 +89,11 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func selectPin(_ sender: UIButton) {
+        completeLabel.isHidden = true
+        profileImageView.isHidden = false
+        profileName.isHidden = false
+        purchaseButton.isHidden = false
+        
         let index = sender.tag
       
         profileImageView.image = productArray[index]

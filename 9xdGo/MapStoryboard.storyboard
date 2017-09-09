@@ -41,19 +41,19 @@
                                         <rect key="frame" x="5" y="5" width="404" height="190"/>
                                         <rect key="contentStretch" x="0.5" y="0.5" width="5.0000000000000002e-05" height="5.0000000000000002e-05"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yellow Hood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="lw2-Qc-trx">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="lw2-Qc-trx">
                                         <rect key="frame" x="190" y="30" width="189" height="30"/>
                                         <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product" translatesAutoresizingMaskIntoConstraints="NO" id="Yyt-y0-wTG">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product" translatesAutoresizingMaskIntoConstraints="NO" id="Yyt-y0-wTG">
                                         <rect key="frame" x="35" y="30" width="140" height="140"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Yyt-y0-wTG" secondAttribute="height" id="ymY-Id-kIf"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzf-Sz-WQQ">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzf-Sz-WQQ">
                                         <rect key="frame" x="190" y="110" width="189" height="60"/>
                                         <color key="backgroundColor" red="1" green="0.6588235294" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -65,12 +65,20 @@
                                             <action selector="purchaseButtonAction:" destination="LGX-fr-MwF" eventType="touchUpInside" id="119-rx-B0I"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김진아 님, 60% 정복!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTy-MA-OMA">
+                                        <rect key="frame" x="111.66666666666669" y="52" width="192" height="96"/>
+                                        <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="48"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Lyv-Br-3HE" secondAttribute="bottom" constant="5" id="3R7-u2-pg2"/>
                                     <constraint firstItem="lw2-Qc-trx" firstAttribute="top" secondItem="Yyt-y0-wTG" secondAttribute="top" id="3rP-Gz-0KV"/>
                                     <constraint firstItem="pzf-Sz-WQQ" firstAttribute="leading" secondItem="lw2-Qc-trx" secondAttribute="leading" id="7Yk-Ha-nEf"/>
                                     <constraint firstItem="Yyt-y0-wTG" firstAttribute="top" secondItem="LZp-Ri-A4g" secondAttribute="top" constant="30" id="BWI-wn-ELd"/>
+                                    <constraint firstItem="mTy-MA-OMA" firstAttribute="centerX" secondItem="LZp-Ri-A4g" secondAttribute="centerX" id="BsL-FD-IRM"/>
+                                    <constraint firstItem="mTy-MA-OMA" firstAttribute="centerY" secondItem="LZp-Ri-A4g" secondAttribute="centerY" id="Emx-k4-DDY"/>
                                     <constraint firstItem="lw2-Qc-trx" firstAttribute="leading" secondItem="Yyt-y0-wTG" secondAttribute="trailing" constant="15" id="MZj-1k-iFm"/>
                                     <constraint firstAttribute="bottom" secondItem="Yyt-y0-wTG" secondAttribute="bottom" constant="30" id="Mu4-N4-vBv"/>
                                     <constraint firstItem="pzf-Sz-WQQ" firstAttribute="bottom" secondItem="Yyt-y0-wTG" secondAttribute="bottom" id="T81-Df-qkY"/>
@@ -101,9 +109,11 @@
                     </view>
                     <connections>
                         <outlet property="chattingImageView" destination="Lyv-Br-3HE" id="iaS-lE-Ldh"/>
+                        <outlet property="completeLabel" destination="mTy-MA-OMA" id="QR1-ka-Wzw"/>
                         <outlet property="mapImageView" destination="GXS-UQ-RxB" id="j5z-GM-3gY"/>
                         <outlet property="profileImageView" destination="Yyt-y0-wTG" id="g5S-ym-fEl"/>
                         <outlet property="profileName" destination="lw2-Qc-trx" id="qsa-hy-lth"/>
+                        <outlet property="purchaseButton" destination="pzf-Sz-WQQ" id="6J4-Qa-7kj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Or-cP-85E" userLabel="First Responder" sceneMemberID="firstResponder"/>
