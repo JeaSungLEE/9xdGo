@@ -27,13 +27,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOODS S#OP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diH-Ii-w2d">
-                                <rect key="frame" x="12" y="328" width="391.33333333333331" height="70"/>
+                                <rect key="frame" x="11" y="328" width="391.33333333333331" height="70"/>
                                 <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="60"/>
                                 <color key="textColor" red="0.73725490199999999" green="0.65098039220000004" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2C-1I-Vww">
-                                <rect key="frame" x="73" y="160" width="269.66666666666669" height="168"/>
+                                <rect key="frame" x="72.333333333333343" y="160" width="269.66666666666663" height="168"/>
                                 <attributedString key="attributedText">
                                     <fragment content="9">
                                         <attributes>
@@ -75,7 +75,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddl-FA-sMd">
-                                <rect key="frame" x="179" y="445" width="88.333333333333314" height="39.666666666666686"/>
+                                <rect key="frame" x="179.33333333333331" y="444.33333333333326" width="88.333333333333314" height="39.666666666666686"/>
                                 <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -88,7 +88,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundLight" translatesAutoresizingMaskIntoConstraints="NO" id="xhX-Ax-bdu">
-                                <rect key="frame" x="0.0" y="-50" width="414" height="150"/>
+                                <rect key="frame" x="-10" y="-50" width="424" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Yh7-fw-ASR"/>
                                 </constraints>
@@ -111,9 +111,15 @@
                             <constraint firstItem="xhX-Ax-bdu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-70" id="lUS-AN-2mC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="u2w-zc-yyk" secondAttribute="bottom" id="sGq-4M-SsT"/>
                             <constraint firstItem="L2C-1I-Vww" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="140" id="vVR-lx-TlZ"/>
-                            <constraint firstItem="xhX-Ax-bdu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x9u-Sh-Tc8"/>
+                            <constraint firstItem="xhX-Ax-bdu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-10" id="x9u-Sh-Tc8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomImage" destination="u2w-zc-yyk" id="z5W-Z8-MdJ"/>
+                        <outlet property="topImage" destination="xhX-Ax-bdu" id="wfy-CW-Rpw"/>
+                        <outlet property="topImageLeft" destination="x9u-Sh-Tc8" id="9YL-OA-foF"/>
+                        <outlet property="topImageTop" destination="lUS-AN-2mC" id="DqR-Qo-oog"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
