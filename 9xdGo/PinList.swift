@@ -9,11 +9,12 @@
 import UIKit
 
 private let pinSize: CGFloat = 20
-private let defaultMapWidth: CGFloat = 1674
-private let defaultMapHeight: CGFloat = 1674
+private let defaultMapWidth: CGFloat = 1173
+private let defaultMapHeight: CGFloat = 1164
 
-private let pinAxisList = [CGPoint(x: 100, y: 100),
-                           CGPoint(x: 1674, y: 1674)]
+private let pinAxisList = [CGPoint(x: 570, y: 150),
+                           CGPoint(x: 990, y: 330),
+                           CGPoint(x: 170, y: 330)]
 
 class PinList {
     private var mapHeight: CGFloat?
