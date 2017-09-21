@@ -21,6 +21,8 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var completeLabel: UILabel!
     @IBOutlet var 테두리이미지: UIImageView!
     
+    var start = true
+    var tempIndex = 1
     private var index = 0
     private let profileViewHeight: CGFloat = 200
     private let productArray: [UIImage] = [#imageLiteral(resourceName: "product"), #imageLiteral(resourceName: "product1"), #imageLiteral(resourceName: "product2")]
@@ -75,7 +77,8 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if !isLogin() {
+        if start {
+            start = false
             UserDefaultsService.shared.id = 0
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
@@ -158,9 +161,12 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
             profileName.text = product.name
             purchaseButton.isHidden = false
         } else {
+            let tempArray: [String] = ["강남역","아남타워","경복궁","시청","제주도"]
+
             profileImageView.image = nil
             profileImageView.backgroundColor = .black
-            profileName.text = "BLOCK"
+            profileName.text = "BLOCK (\(tempArray[tempIndex]))"
+            tempIndex += 1
             purchaseButton.isHidden = true
         }
     }

@@ -179,7 +179,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="만든이  이재성 이규진 유용우 이강산 김진아" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJu-I2-UHt">
-                                <rect key="frame" x="123" y="320" width="130" height="408"/>
+                                <rect key="frame" x="123.5" y="320" width="130" height="408"/>
                                 <fontDescription key="fontDescription" name="morris9" family="morris9" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -231,6 +231,9 @@
                                     <constraint firstAttribute="height" constant="60" id="jpK-9C-CxZ"/>
                                 </constraints>
                                 <state key="normal" title="Purchase" backgroundImage="purchaseButtonImage"/>
+                                <connections>
+                                    <action selector="purchaseAction:" destination="Rmi-og-BOb" eventType="touchUpInside" id="VCf-sW-aLr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejQ-dD-X3g">
                                 <rect key="frame" x="329" y="40" width="30" height="30"/>

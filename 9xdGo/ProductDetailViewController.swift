@@ -19,6 +19,8 @@ class ProductDetailViewController: UIViewController {
         return true
     }
     
+    @IBAction func purchaseAction(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
